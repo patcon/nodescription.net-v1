@@ -22,3 +22,6 @@ So the postulate is that the best app is the one that fades into the background 
 And app should be as minimal as possible -- introducing as little new technology and neutral behavioral change as possible. I say "neutral behvioural change", because often a good app will attempt to change your behavior for the better. Like if aThere's nothing wrong with that. And if you can look at your problem and determine that it can be solved with existing tools or using no new technology, then THAT is ideal.
 
 And this kinda tips things on their head, as most apps seem to define success as being able to monopolize and shape more and more of your life. We measure success as engagement. I get a ping for each thing that happens on Facebook, and when I read every one, I would imagine Facebook takes that as a success. But is it?
+
+[COMMENTS]
+Yashar: Nicely said my friend!
