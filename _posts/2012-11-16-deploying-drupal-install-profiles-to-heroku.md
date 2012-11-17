@@ -52,3 +52,14 @@ git push
 ```
 
 Now visit the site and you should be able to run though the install process to build the database.
+
+## Ideas
+
+- Use php-build and php-version to pick the php version to build in the buildpack via and envvars:
+https://github.com/CHH/php-build
+https://github.com/wilmoore/php-version
+
+- Use a custom buildpack to run drush make appropriately and generate site from install profile.
+  - Can get commit hash for build scripting in `$_ENV['COMMIT_HASH']`:
+  http://stackoverflow.com/questions/1582783/heroku-display-git-revision-hash-and-timestamp-in-views
+- Add mbstring support via buildpack (Drupal warns): 
