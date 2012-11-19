@@ -6,6 +6,20 @@ published: false
 
 # Deploying Drupal Install Profiles to Heroku
 
+Having lived in Drupal Narnia for the past 5 years, I'd often heard buzzwords drift in from other communities. One such buzzword was "Heroku", which was some used for deploying apps. I didn't know much about how it worked, but heard that it somehow involved "dynos" and "slugs". I didn't know what these things meant, but since Heroku was for deploying and hosting ruby apps, I didn't particularly care.
+
+In the past year or so, I've started to use some ruby tools with Drupal, and I've gotten comfortable with the ecosystem and started to dive a little deeper into services like Heroku. In a nutshell, the Heroku of 2007 was to the ruby world what Acquia and Pantheon are to the Drupal world -- each was a Platform as a Service (PaaS) intended to host a certain type of application. Heroku operates in a manner more akin to Pantheon rather than Acquia. Whereas Acquia tends to treat servers (shared or dedicated) as the first-class citizens in their model, Heroku and Pantheon treat "processes" as the first-class citizens. I'm still coming to grips with the finer points, but the general difference is that to scale up an application on Acquia, you pay for more servers on ManagedCloud or upgrade from DevCloud where you had a slice of a shared server. With Pantheon/Heroku, you scale by added more processes, and the processes dedicated to your application need not all be run on the same server over the lifetime of your application. It's this latter model that has made it so simple for Pantheon and Acquia to offer free application hosting -- if an app is inactive, the PaaS can intelligently decide to stop running those processes, and free up those resource until a visitor comes knocking. Pantheon has [a great write-up on how they do it.](https://www.getpantheon.com/news/inside-pantheon-drops)
+
+I'll take a sec to explain the important parts of Heroku's deployment workflow. Much like Acquia and Pantheon, you deploy by pushing to a git repo, for which each code push kickstarts a deploy process. Heroku works with many languages now, but all have a similar workflow: The developer stores a build file in the root of their application, and during each push, Heroku uses the appropriate package manager to read this build file and pull in all dependencies required to deploy the app. The analogous components in the Drupal developer's toolkit would be Drush Make building its `build.make` file (or perhaps Composer and `composer.json`, if you're keeping up with the Joneses). Consequently, since dependencies are pulled in and built by the package manager on each deployable git push, Heroku users don't tend to include dependant packages and libraries in their version control system. They instead choose to reduce all that "code noise" of those libraries into a flat build file, and treat each library as a black box unless they find the need to hack it.
+
+So this brings us to today, where Heroku and the market in general seem to be moving toward a totally language and application-agnostic model that might soon threaten (or at least put pressure), on niche players like Acquia and even the more future-ready Pantheon. Whereas in the past, Heroku's internal code was geared to launching ruby apps, they now serve apps written in Python, Clojure, Node.js, and (at least unofficially) PHP apps. What's more, the setup of each of these environments is *totally programmable*. Let me explain this a little more fully, because it's honestly the most important part.
+
+TODO:
+- Buildpacks (Stackato using Heroku buildpacks)
+  - Custom buildpacks allow us to create our own community build processes
+- CloudFoundry apps are now deployable across any cloudfoundry PaaS
+- Explain the heroku CLI, envvars, and addon ecosystem
+
 - http://sysadminsjourney.com/content/2011/09/20/drupal-heroku/
 - https://devcenter.heroku.com/articles/buildpacks
 - https://github.com/heroku/heroku-buildpack-php/
