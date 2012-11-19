@@ -65,7 +65,9 @@ http://YOUR_APP_NAME.herokuapp.com/install.php
 - If your DB is *empty* and you'd like to reinstall your site programmatically via drush:
 
         heroku run "cd www; LD_LIBRARY_PATH=../php/ext ./../php/bin/php -f ../drush/drush.php site-install minimal --php=../php/bin/php --yes --account-pass=admin"
-        
+
+- Law of the Instrument FTW: http://en.wikipedia.org/wiki/Law_of_the_instrument
+
 ## Ideas
 
 - Use php-build and php-version to pick the php version to build in the buildpack via and envvars:
