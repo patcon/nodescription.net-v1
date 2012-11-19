@@ -17,42 +17,39 @@ https://github.com/patcon/heroku-buildpack-php-drupal
 For now, just trying to get Drupal working with some of the free heroku add-ons:
 
 ```
-drush dl drupal --drupal-project-rename=heroku-drupal
-cd heroku-drupal
-git init
-git add .
-git ci -m "Initial commit."
+# Install Heroku CLI gem
+# You may alternatively use the Heroku Toolbelt installer:
+# https://toolbelt.heroku.com/
 gem install heroku
-heroku create --stack cedar
-git push -u heroku master
-heroku addons:add cleardb:ignite
-cp sites/default/default.settings.php sites/default/settings.php
-cat << EOH >> sites/default/settings.php
-preg_match('|^mysql://(.*):(.*)@(.*)/(.*)\?reconnect=true$|', $_ENV['CLEARDB_DATABASE_URL'], $db_url_parts);
 
-$databases = array (
-  'default' =>. 
-  array (
-    'default' =>. 
-    array (
-      'database' => $db_url_parts[4],
-      'username' => $db_url_parts[1],
-      'password' => $db_url_parts[2],
-      'host' => $db_url_parts[3],
-      'port' => '', 
-      'driver' => 'mysql',
-      'prefix' => '', 
-    ),  
-  ),  
-);
-EOH
-git add .
-git ci -m "Added db credentials."
-git push
+# Clone minimal install profile with appropriate structure
+git clone https://github.com/patcon/heroku-drupal-profile.git
+cd heroku-drupal-profile
+
+# Create the Heroku app and push your code
+heroku create --stack cedar --buildpack https://github.com/patcon/heroku-buildpack-php-drupal.git
+git push -u heroku master
+# Watch the output as your app is deployed to a url like:
+# http://YOUR_APP_NAME.herokuapp.com/install.php
+
+# Scale up to one webserver "dyno".
+# A "dyno" is a term in heroku's process model of deployment.
+heroku scale web=1
 ```
 
-Now visit the site and you should be able to run though the install process to build the database.
+Now visit the site's `install.php` page and you should be able to run though the install process to build the database.
 
+http://YOUR_APP_NAME.herokuapp.com/install.php
+
+- To blow away the database so you can run through the installer again (presuming you're building your site as an install profile):
+
+        heroku addons:remove cleardb:ignite --confirm YOUR_APP_NAME
+        heroku addons:add cleardb:ignite
+
+- If your DB is *empty* and you'd like to reinstall your site programmatically via drush:
+
+        heroku run "cd www; LD_LIBRARY_PATH=../php/ext ./../php/bin/php -f ../drush/drush.php site-install minimal --php=../php/bin/php --yes --account-pass=admin"
+        
 ## Ideas
 
 - Use php-build and php-version to pick the php version to build in the buildpack via and envvars:
@@ -62,4 +59,4 @@ https://github.com/wilmoore/php-version
 - Use a custom buildpack to run drush make appropriately and generate site from install profile.
   - Can get commit hash for build scripting in `$_ENV['COMMIT_HASH']`:
   http://stackoverflow.com/questions/1582783/heroku-display-git-revision-hash-and-timestamp-in-views
-- Add mbstring support via buildpack (Drupal warns): 
+- Add mbstring support via buildpack (Drupal warns):
