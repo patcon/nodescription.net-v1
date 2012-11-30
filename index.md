@@ -1,6 +1,6 @@
 ---
 layout: page
-title: nodescription
+title: Brain says:
 tagline: I've decided that I get my kicks from novel arrangements of words and ideas.
 ---
 {% include JB/setup %}
