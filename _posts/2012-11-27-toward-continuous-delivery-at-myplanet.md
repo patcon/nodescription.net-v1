@@ -6,6 +6,8 @@ published: false
 
 # Toward Continuous Delivery at Myplanet
 
+
+
 ## Install Profiles
 
 - We supplement the traditional install profile layout with everything else we can get into code. (tests, scripts, docs, unique configuration files the rest of the toolchain). Everything from deploy scripts to jenkins config files should be accessible to the developers working on a project. We're even exploring a tool called Sprint.ly which can act as a thin wrapper around your repo, which essentially populates and manages project management data primarily using repo commit message data.
@@ -30,3 +32,7 @@ published: false
 
 - Jenkins, Acquia, Drupal,
 - We try to be tool agnostic. General scripts that can be run anywhere, with simpler wrapper scripts intended to be run on jenkins.
+
+Hopefully it's coming across how excited we are about all this stuff. I'm assuming that ol' Nate-O, our resident content strategist, will have put on his Editor hat and culled down my superlative count by 80%, but hopefully it's still coming across how excited we are about all this stuff. *[Editor's note: While Patrick uses more superlatives than anyone I know, I've left them intact. Also, stop calling me "Nate-O".]* Personally, the thing I'm most excited about is the fact that, at every level, the folks at Myplanet are all excited to share our code and processes early and often. We don't define success as hoarding effective processes, but rather in sharing them as widely as possible.
+
+Oh, and in case you happen to be a Drupal developer with your eyes peeled for the next great opportunity, I was supposed to mention one more thing: Nate smells. *[Editor's Note: What Patrick was supposed to mention was that we're hiring. And no I don't.]*
