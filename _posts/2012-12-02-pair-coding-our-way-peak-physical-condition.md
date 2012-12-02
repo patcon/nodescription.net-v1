@@ -23,6 +23,13 @@ Progressive employers like Myplanet are already allocating company time for heal
 
 Could the definition of done for a story on a team also involve personal criteria around target heart-rates acheieved during the completion of stories?
 
+Steps to get there:
+  - Begin a pair coding regiment at Myplanet.
+  - Navigators should try biking as they work to iron out kinks and test feasability.
+  - Write a simple app to lock the screen under a certain criteria, likely involving an arduino somehow tracking activity on a the bike in ome boolean fashion -- ie. is the navigator pedaling or not?
+  - Make sensor apparatus more robust to clock speed.
+  - Make app more robust to warn/countdown when hitting threshold.
+
 References:
 
 - http://stackoverflow.com/questions/1976520/lock-screen-by-api-in-mac-os-x
