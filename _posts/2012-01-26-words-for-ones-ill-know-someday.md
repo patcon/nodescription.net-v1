@@ -1,7 +1,7 @@
 ---
 title: words for ones i'll know someday
 layout: default
-published: false
+published: true
 tags: [quickie, musings]
 ---
 
