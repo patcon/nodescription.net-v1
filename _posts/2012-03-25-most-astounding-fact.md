@@ -2,7 +2,7 @@
 title: The Most Astounding Fact
 layout: default
 published: true
-tags: [quickie,musing]
+tags: [quickie, musings]
 ---
 
 # The Most Astounding Fact
