@@ -1,5 +1,5 @@
 ---
-title: The Most Astounding Fact
+title: the most astounding fact
 layout: default
 published: true
 tags: [quickie, musings]
