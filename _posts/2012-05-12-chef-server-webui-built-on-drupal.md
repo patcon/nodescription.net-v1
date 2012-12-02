@@ -1,7 +1,7 @@
 ---
 title: toward a chef-server web UI built on drupal
 layout: default
-published: false
+published: true
 tags: [devops, chef, nerd, drupal]
 ---
 
