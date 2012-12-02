@@ -22,3 +22,7 @@ So lately, I've been thinking on how it might be possible to incorporate cardio 
 Progressive employers like Myplanet are already allocating company time for health and wellness. But in the current state of things, it's more like an add-on that's tacked onto the employee experience -- the idea is that we stop doing productive work to be healthy, because we understand that in the fuzzy long-run, it's better for both ourselves and the company. But sometimes it's all too easy to skip the wellness excercises to focus on that pesky coding problem just a little bit longer. We don't want to remove ourselves from the flow that we're in. But what if fitness was in our flow -- if it was a intergral part of of our routine for developing awesome applications? And how amazing would it be to know that whe you were going into work each day, you were not only going to build great products, but build a better *you*. Yeah, it sounds cheesey, but also pretty damn exciting.
 
 Could the definition of done for a story on a team also involve personal criteria around target heart-rates acheieved during the completion of stories?
+
+References:
+
+- http://stackoverflow.com/questions/1976520/lock-screen-by-api-in-mac-os-x
