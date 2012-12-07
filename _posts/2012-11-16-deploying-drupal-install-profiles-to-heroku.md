@@ -77,4 +77,6 @@ https://github.com/wilmoore/php-version
 - Use a custom buildpack to run drush make appropriately and generate site from install profile.
   - Can get commit hash for build scripting in `$_ENV['COMMIT_HASH']`:
   http://stackoverflow.com/questions/1582783/heroku-display-git-revision-hash-and-timestamp-in-views
-- Add mbstring support via buildpack (Drupal warns):
+- Add mbstring support via buildpack (Drupal warns).
+- Perhaps can even add hooks like python buildpack did: https://github.com/heroku/heroku-buildpack-python/blob/master/bin/steps/hooks/pre_compile
+- Talk about vulcan and how it makes it simple to run Drupal on whatever system-level tools your heart desires. Want a specific version of PHP? Of apache? Vulcan makes it simple to compile these tools on the heroku stack itself, then save them to an Amazon S3 storage bucket where your compile script can pull it in on each push: http://www.ryandaigle.com/a/using-vulcan-to-build-binary-dependencies-on-heroku
