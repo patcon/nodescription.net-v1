@@ -1,11 +1,11 @@
 ---
-title: "unlimited vacation: finding hidden metrics in perks"
+title: 'unlimited vacation: finding hidden metrics in company perks'
 layout: default
-published: false
+published: true
 tags: [myplanet]
 ---
 
-# unlimited vacation: finding hidden metrics in perks
+# unlimited vacation: finding hidden metrics in company perks
 
 Unlimited vacation. It's one of those ideas so crazy that it just might work, like *20,000 Leagues Under the Sea on Ice*, or any suggestion by B. A. Baracus. I'd never heard of it until [@kennethreitz](https://twitter.com/kennethreitz) gave everyone [a peak into the Pandora's Box that is Heroku's company perk list](http://kennethreitz.com/on-heroku-and-2012.html).
 
