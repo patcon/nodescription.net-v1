@@ -32,6 +32,6 @@ Let's say that your employees are taking *too much* vacation. In this case, an u
 
 On the other hand, what if your employees are taking *too little* vacation -- What does this say about them? Ah, and here's the *M. Night Shyamalan*: It says nothing necessarily bad about them. The most important thing is reveals is about the *organization*: It's a test of how compassionate a company is. Because if you're running an outfit that's allowing people to burn themselves out, then you're doing it wrong. You need to fix your shit, pronto.
 
-So as far as I'm concerned, every company concerned with building a culture of trust and compassion should at least experiment with unlimited vacations. I'm sure there are plenty of other standard practices that similarly mask effective indicators of company health. And if we leave these things unchallenged, we're missing out on a powerful set of checks and balances. And maybe some cool perks too.
+As far as I'm concerned, companies concerned with building a culture of trust and compassion should at least grapple with the reasons why an unlimited vacation policy wouldn't appear to work. I'm sure there are plenty of other standard practices that similarly mask effective indicators of company health. And if we leave these things unchallenged, we're missing out on a powerful set of checks and balances. And maybe some cool perks too.
 
 ONLY IRRESPONSABLE COMPANIES DON'T OFFER ME UNLIMITED YOGEN FRÜZ.
