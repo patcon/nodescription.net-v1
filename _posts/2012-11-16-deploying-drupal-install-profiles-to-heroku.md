@@ -18,14 +18,14 @@ So this brings us to today, where Heroku and the market in general seem to be mo
 
 As I mentioned, when you `git push` a Ruby app to Heroku, it runs through this automated build process that looks like this from the command line:
 
-This is facilitated by something called a "build pack", which is a little pluggable bundle that knows how to detect when the pushed code is a Ruby app, and run the appropriate commands to build it. The [ruby build pack](link) is one the defaults that Heroku offers, along with ones for [Python](), [Node.js](), and [Python](), among others. The build packs start with a blank slate, and do everything from installing the specific language binaries (eg. Ruby 1.9.3) to setting up the required build tools (eg. Bundler for Ruby).
+This is facilitated by something called a "build pack", which is a little pluggable bundle that knows how to detect when the pushed code is a Ruby app, and run the appropriate commands to build it. The [ruby build pack](link) is one the defaults that Heroku offers, along with ones for [Python](), [Node.js](), and [PHP](https://github.com/heroku/heroku-buildpack-php/), among others. The build packs start with a blank slate, and do everything from installing the specific language binaries (eg. Ruby 1.9.3) to setting up the required build tools (eg. Bundler for Ruby).
 
 Where this gets really awesome is that when you're creating your Heroku app using their commandline tool, you can actually specify a repository for your custom build pack.
 
     # Example
     heroku create blah --buildpack=https://
 
-The creation of custom build packs is well-documented, and people have already done some cool things, like [adding Composer support](link). So this is where things get awesome: We can actually fork the PHP build pack and create a custom Drupal install profile build pack that does the following:
+The creation of custom build packs is [well-documented](https://devcenter.heroku.com/articles/buildpacks), and people have already done some cool things, like [adding Composer support](http://bergie.iki.fi/blog/using_composer_to_manage_dependencies_in_heroku_php_apps/). So this is where things get awesome: We can actually fork the PHP build pack and create a custom Drupal install profile build pack that does the following:
 
 - Installs a specific version of PHP
 - Installs a specific version of Drush
@@ -41,15 +41,10 @@ I don't know about you, but the power that this gives to developers is pretty mi
 Admittedly, some of these things are on the horizon and not yet viable alternatives for anyone but the hardest of the hardcore. But it's incredibly exciting to be getting onto a track that seems pretty secure from obsolecense going into the future.
  
 TODO:
-- Buildpacks (Stackato using Heroku buildpacks)
-  - Custom buildpacks allow us to create our own community build processes
-- CloudFoundry apps are now deployable across any cloudfoundry PaaS
+- Divide post into two: Heroku vs high-level "what this means"
 - Explain the heroku CLI, envvars, and addon ecosystem
 
 - http://sysadminsjourney.com/content/2011/09/20/drupal-heroku/
-- https://devcenter.heroku.com/articles/buildpacks
-- https://github.com/heroku/heroku-buildpack-php/
-- http://bergie.iki.fi/blog/using_composer_to_manage_dependencies_in_heroku_php_apps/
 
 Hoping to create a buildpack for deploying a drupal install profile, installing drush make and using it to rebuild the site each time:
 https://github.com/patcon/heroku-buildpack-php-drupal
