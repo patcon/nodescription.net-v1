@@ -1,6 +1,6 @@
 ---
 layout: default
-title: openStudent: agiley-developed, open student management system fighting status quo
+title: 'openStudent: agiley-developed, open student management system fighting status quo'
 published: false
 ---
 
